@@ -55,10 +55,10 @@ class border(create_balls):
 
 
 
-        class numbers():
-                import turtle
 
-                def init(my_turtle, color):
+
+
+        def init(my_turtle, color):
                     turtle.speed(0)
                     turtle.tracer(0)
                     turtle.hideturtle()
@@ -71,7 +71,7 @@ class border(create_balls):
                     my_turtle.pensize(10)
 
 
-                def draw(my_turtle, digit):
+        def draw(my_turtle, digit):
                     if digit == 0:
                         my_turtle.goto(-50, 100)
                         my_turtle.pendown()
@@ -190,29 +190,32 @@ class border(create_balls):
                         my_turtle.left(90)
                         my_turtle.penup()
 
-                def clear(my_turtle):
-                    my_turtle.clear()
+        def clear(my_turtle):
+                        my_turtle.clear()
 
-                def my_delay(dt):
-                    import time
-                    start =  time.time()
-                    while time.time() - start < dt:
-                        pass
+        def my_delay(dt):
+                        import time
+                        start =  time.time()
+                        while time.time() - start < dt:
+                            pass
 
-                Tom = turtle.Turtle()
-                tom_color = (255, 0, 0)
-                init(Tom, tom_color)
-                delay_in_seconds = 0.2
-                while True:
-                    for i in range(0, 10):
-                        clear(Tom)
-                        draw(Tom, i)
-                        my_delay(delay_in_seconds)
-                        turtle.update()
+        Tom = turtle.Turtle()
+        tom_color = (255, 0, 0)
+        init(Tom, tom_color)
+        delay_in_seconds = 0.2
+        while True:
+            for i in range(0, 10):
+                clear(Tom)
+                draw(Tom, i)
+                my_delay(delay_in_seconds)
+                turtle.update()
+                
+                init()
+                draw()
 
 
 
 
 
-                                                                        # hold the window; close it by clicking the window close 'x' mark
-                        turtle.done()
+                                                                            # hold the window; close it by clicking the window close 'x' mark
+                turtle.done()
